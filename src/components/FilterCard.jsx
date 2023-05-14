@@ -1,5 +1,6 @@
 
-function FilterCard({ name, describe, price, category, img }) {
+function FilterCard(props) {
+  const [ name, describe, price, category, img ] = props
   return (
     <div className="card">
       <h2>{name}</h2>
