@@ -1,13 +1,15 @@
 
 function FilterCard(props) {
-  const [ name, describe, price, category, img ] = props
+  const { name, describe, price, category, img } = props
   return (
-    <div className="card">
+    <div className="product__card">
       <h2>{name}</h2>
       <p>{describe}</p>
       <p>{price}</p>
       <p>{category}</p>
-      <img src={img} alt="rasm bor" />
+      <div className="card--img">
+        <img src={img} alt="rasm bor" />
+      </div>
     </div>
   );
 }

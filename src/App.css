@@ -1,3 +1,60 @@
 .container{
-  width: 90%;
+  width: 1230px;
+  margin: 0 auto;
+}
+.mebel-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 32px 12px;
+  
+
+}
+.home{
+  display: flex;
+  margin: 50px auto; 
+  justify-content: space-between;
+
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product__card{
+  font-family:'Courier New', Courier, monospace;
+  width: 350px;
+  padding: 24px;
+  box-shadow: 4px 4px 18px 0px rgba(0, 0, 0, 0.4) ;
+  background-color: rgba(213, 217, 221, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.card--title{
+  width: 60%;
+}
+.card--price{
+  font-size: 32px;
+}
+.card--img{
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+}
+.card--img img{
+  width: 100%;
+  height: 100%;
+}
+.checkboxes{
+  display: flex;
+  gap: 12px;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+}
+aside{
+  position: fixed;
+  left: 150px;
 }

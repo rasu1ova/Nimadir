@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 import FilterCard from "./FilterCard";
 
 function Filter() {
@@ -128,7 +127,7 @@ function Filter() {
 
       {isLoading && <p>Loading...</p>}
 
-      <div id="mebel-list" className="mebel-list">
+      <div id="mebel-list" className="mebel-list container">
         {filterData &&
           filterData.map((mebel) => (
             <FilterCard

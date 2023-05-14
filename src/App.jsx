@@ -1,11 +1,14 @@
 
-import Filter from "./components/Filter";
-import Weather from "./components/Weather/Weather";
+import Allegria from "./components/Allegria/Allegria";
+// import Filter from "./components/Filter";
+// import Weather from "./components/Weather/Weather";
+import './App.css'
 function App() {
   return (
     <>
-      <Weather />
-      <Filter/>
+      {/* <Weather /> */}
+      {/* <Filter/> */}
+      <Allegria/>
     </>
   );
 }

@@ -128,7 +128,7 @@ function Weather() {
           </>
         ) : (
           <>
-            <p className="red">Qayta kiriting xato yozding</p>
+            <p className="red">Qayta kiriting </p>
           </>
         )}
       </div>
