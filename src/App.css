@@ -7,14 +7,20 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 32px 12px;
-  
 
 }
 .home{
   display: flex;
   margin: 50px auto; 
-  justify-content: space-between;
+  justify-content:flex-end;
 
+}
+.product-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 32px 12px;
+  width: 90%;
 }
 .row{
   display: flex;
@@ -23,8 +29,8 @@
 }
 .product__card{
   font-family:'Courier New', Courier, monospace;
-  width: 350px;
-  padding: 24px;
+  width: 320px;
+  padding: 12px;
   box-shadow: 4px 4px 18px 0px rgba(0, 0, 0, 0.4) ;
   background-color: rgba(213, 217, 221, 0.7);
   display: flex;
@@ -56,5 +62,29 @@
 }
 aside{
   position: fixed;
-  left: 150px;
+  max-width: 300px;
+  width: auto;
+  right: 50px;
+  box-shadow: 4px 4px 18px 0px rgba(0, 0, 0, 0.4) ;
+  background-color: rgba(213, 217, 221, 0.7);
+  padding: 24px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.row--start{
+  display: flex;
+  gap: 24px;
+}
+.col button{
+  padding:6px 24px;
+  font-size: 18px;
+  max-width: 310px;
+}
+.row--start .price, select{
+  width: 90%;
+  padding:4px 2px;
+  margin: 6px 0 ;
 }
