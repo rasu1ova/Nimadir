@@ -1,14 +1,18 @@
-
 import Allegria from "./components/Allegria/Allegria";
-// import Filter from "./components/Filter";
-// import Weather from "./components/Weather/Weather";
 import './App.css'
+import Header from "./components/Header/Header";
+import Weather from "./components/Weather/Weather";
+import { Route, Routes } from "react-router-dom";
 function App() {
   return (
     <>
-      {/* <Weather /> */}
-      {/* <Filter/> */}
-      <Allegria/>
+      <Header/>
+
+        <Routes>
+          <Route path="/weather" element={<Weather />} />
+          <Route path="/clothes" element={<Allegria />} />
+        </Routes>
+
     </>
   );
 }

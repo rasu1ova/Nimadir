@@ -14,8 +14,8 @@ function Card(props) {
             <p>{color}</p>
             <p>{material}</p>
         </div>
-        {/* <p>{description}</p>
-        <p>{size}</p> */}
+        <p>{description}</p>
+        <p>{size}</p>
     </div>
   )
 }

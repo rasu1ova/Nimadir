@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Card from "./Card";
+import { fetchMyData } from "../../redux/getActions";
 
 function Allegria() {
-  //   const [loading, setLoading] = useState(false);
   const [clothes, setClothes] = useState([]);
   const [filterData, setFilterData] = useState([]);
   const [colors, setColors] = useState([]);
@@ -15,15 +16,17 @@ function Allegria() {
 
   const colorArray = new Set();
   const materialArray = new Set();
+  const dispatch = useDispatch();
+  const myData = useSelector((state) => state.clothesData.data);
+  const isLoading = useSelector((state) => state.clothesData.status);
   useEffect(() => {
-    fetch("https://my-json-server.typicode.com/rasu1ova/Server/clothes")
-      .then((response) => response.json())
-      .then((data) => {
-        setClothes(data);
-        setFilterData(data);
-      })
-      .catch((error) => console.log(error));
-  }, []);
+    dispatch(fetchMyData());
+
+  }, [dispatch]);
+  useEffect(() => {
+    setClothes(myData);
+    setFilterData(myData);
+  }, [myData]);
   const handleAllButtonClick = () => {
     setFilterData(clothes);
   };
@@ -61,18 +64,12 @@ function Allegria() {
     setFilterData(filterSize);
   }, [currSize]);
   useEffect(() => {
-    console.log(fromPrice);
-    console.log(toPrice);
-    console.log(fromPrice < toPrice);
-    console.log(typeof fromPrice);
-    console.log(typeof toPrice);
     const filterPrice =
       fromPrice < toPrice
         ? clothes.filter(
             (item) => fromPrice < item.price && item.price < toPrice
           )
         : clothes;
-    console.log(filterPrice);
     setFilterData(filterPrice);
   }, [fromPrice, toPrice]);
 
@@ -87,6 +84,7 @@ function Allegria() {
 
   return (
     <div className="container home">
+      { isLoading === 'loading'? <h2>Loading...</h2> : ''}
       <div className="product-list">
         {filterData &&
           filterData.map((item) => (

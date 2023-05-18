@@ -2,25 +2,34 @@
   width: 1230px;
   margin: 0 auto;
 }
+header{
+  padding: 50px 0;
+}
+nav{
+  display: flex;
+  gap: 32px;
+}
+nav a{
+  color: forestgreen;
+  font-size: 20px;
+}
 .mebel-list{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 32px 12px;
-
 }
 .home{
   display: flex;
   margin: 50px auto; 
-  justify-content:flex-end;
-
+  justify-content:space-between;
 }
 .product-list{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap !important;
   justify-content: space-evenly;
   gap: 32px 12px;
-  width: 90%;
+  width: 80%;
 }
 .row{
   display: flex;
@@ -36,6 +45,20 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+aside{
+  position: fixed;
+  max-width: 300px;
+  width: auto;
+  right: 50px;
+  box-shadow: 4px 4px 18px 0px rgba(0, 0, 0, 0.4) ;
+  background-color: rgba(213, 217, 221, 0.7);
+  padding: 24px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .card--title{
   width: 60%;
@@ -60,20 +83,7 @@
   display: flex;
   flex-direction: column;
 }
-aside{
-  position: fixed;
-  max-width: 300px;
-  width: auto;
-  right: 50px;
-  box-shadow: 4px 4px 18px 0px rgba(0, 0, 0, 0.4) ;
-  background-color: rgba(213, 217, 221, 0.7);
-  padding: 24px;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 .row--start{
   display: flex;
   gap: 24px;
@@ -87,4 +97,11 @@ aside{
   width: 90%;
   padding:4px 2px;
   margin: 6px 0 ;
+}
+
+@media screen and (max-width:1470px){
+  .product-list{
+    flex-wrap: wrap;
+    width: 90%;
+  }
 }
