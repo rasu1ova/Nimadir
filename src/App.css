@@ -1,0 +1,152 @@
+.container {
+  width: 1230px;
+  margin: 0 auto;
+}
+header {
+  padding: 50px 0;
+}
+nav {
+  display: flex;
+  gap: 32px;
+}
+nav a {
+  color: forestgreen;
+  font-size: 20px;
+}
+.mebel-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 32px 12px;
+}
+.home {
+  display: flex;
+  margin: 50px auto;
+  justify-content: space-between;
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap !important;
+  justify-content: space-evenly;
+  gap: 32px 12px;
+  width: 80%;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.product__card {
+  font-family: "Courier New", Courier, monospace;
+  width: 320px;
+  padding: 12px;
+  box-shadow: 4px 4px 18px 0px rgba(0, 0, 0, 0.4);
+  background-color: rgba(213, 217, 221, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+aside {
+  position: fixed;
+  max-width: 300px;
+  width: auto;
+  right: 50px;
+  box-shadow: 4px 4px 18px 0px rgba(0, 0, 0, 0.4);
+  background-color: rgba(213, 217, 221, 0.7);
+  padding: 24px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card--title {
+  width: 60%;
+}
+.card--price {
+  font-size: 32px;
+}
+.card--img {
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+}
+.card--img img {
+  width: 100%;
+  height: 100%;
+}
+.checkboxes {
+  display: flex;
+  gap: 12px;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row--start {
+  display: flex;
+  gap: 24px;
+}
+.col button {
+  padding: 6px 24px;
+  font-size: 18px;
+  max-width: 310px;
+}
+.row--start .price,
+select {
+  width: 90%;
+  padding: 4px 2px;
+  margin: 6px 0;
+}
+.time {
+  max-width: 90%;
+  width: 320px;
+  margin: 0 auto;
+  text-align: center;
+}
+.time .card {
+  width: auto;
+  font-size: 20px;
+}
+.time .card:hover,
+.time--btn:hover {
+  box-shadow: inset 4px 4px 18px 0px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s;
+}
+.right {
+  text-align: right;
+  margin: 24px 0;
+}
+.time--btn{
+  padding: 8px 18px;
+  font-size: 18px;
+}
+.del--btn{
+  padding: 4px 8px;
+  border-radius: 50%;
+  border: none;
+  box-shadow: inset 4px 4px 4px 0px rgba(0, 0, 0, 0.4);
+}
+.flexing{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 580px;
+  margin: 0 auto;
+  max-width: 90%;
+}
+.flexing li{
+  width: 160px;
+}
+@media screen and (max-width: 1470px) {
+  .container{
+    width: 90%;
+  }
+  .product-list {
+    flex-wrap: wrap;
+    width: 90%;
+  }
+}
