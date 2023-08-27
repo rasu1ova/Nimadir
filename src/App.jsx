@@ -5,13 +5,11 @@ function App() {
   return (
     <>
       <Header/>
-
         <Routes>
           <Route path="/weather" element={<Weather />} />
           <Route path="/clothes" element={<Allegria />} />
           <Route path="/watch" element={<Watch/>} />
         </Routes>
-
     </>
   );
 }
